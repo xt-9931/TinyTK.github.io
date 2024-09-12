@@ -41,11 +41,11 @@
 <meta property="og:title" content="电子设计常用芯片集锦">
 <meta property="og:url" content="https://tinytka.github.io/2023/10/18/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E5%B8%B8%E7%94%A8%E8%8A%AF%E7%89%87%E9%9B%86%E9%94%A6/index.html">
 <meta property="og:site_name" content="TinyTka&#39;s Blog">
-<meta property="og:description" content="电子设计常用芯片Part 1 串口通信 CH340C  国产芯片 外围器件少 双列SOP16封装 焊接难度小 占板面积大 便宜   CP2102   国外芯片 QFN封装 外围器件少 占板面积小 焊接难度大 贵    Part 2 DC-DC 降压-  Part 3 LDO 降压 RT9012  双通道输出 带使能端 300mA输出能力   RT9013  单通道输出能力 500mA输出能力">
+<meta property="og:description" content="电子设计常用芯片Part 1 串口通信 CH340C  国产芯片 外围器件少 双列SOP16封装 焊接难度小 占板面积大 便宜   CP2102   国外芯片 QFN封装 外围器件少 占板面积小 焊接难度大 贵    Part 2 DC-DC 降压 SY8088AAC特性： 2.5 ~ 5.5V输入电压 40uA静态电流 最高1A电流输出 EN使能上升阈值最低电压1.5V SOT23-5封装">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-18T13:10:02.000Z">
-<meta property="article:modified_time" content="2023-10-18T13:42:19.144Z">
+<meta property="article:modified_time" content="2024-09-12T13:51:12.876Z">
 <meta property="article:author" content="ptyybb">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2111,7 +2111,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1726148920192),
+    lastupdate: new Date(1726149085648),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2533,7 +2533,51 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 </ul>
-<h5 id="Part-2-DC-DC-降压"><a href="#Part-2-DC-DC-降压" class="headerlink" title="Part 2 DC-DC 降压"></a>Part 2 DC-DC 降压</h5><p>- </p>
+<h5 id="Part-2-DC-DC-降压"><a href="#Part-2-DC-DC-降压" class="headerlink" title="Part 2 DC-DC 降压"></a>Part 2 DC-DC 降压</h5><ul>
+<li>SY8088AAC<br>特性：<ul>
+<li>2.5 ~ 5.5V输入电压</li>
+<li>40uA静态电流</li>
+<li>最高1A电流输出</li>
+<li>EN使能上升阈值最低电压1.5V</li>
+<li>SOT23-5封装</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>SY8089AAC<br>特性：<ul>
+<li>2.7 ~ 5.5V输入电压</li>
+<li>最高2A持续电流输出</li>
+<li>EN使能上升阈值最低电压1.5V</li>
+<li>SOT23-5封装</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>MT3520B<br>特性：<ul>
+<li>最高96%效率</li>
+<li>最高2A持续电流</li>
+<li>40uA静态电流</li>
+<li>最低输出0.6V</li>
+<li>2.3 ~ 6V输入电压</li>
+<li>SOT23-5封装</li>
+<li>EN使能阈值1.5V</li>
+<li>EN失能阈值0.3V</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>TLV62569<br>特性：<ul>
+<li>2.5 ~ 5.5V输入电压</li>
+<li>35uA静态电流</li>
+<li>最高2A输出电流</li>
+<li>EN使能典型阈值0.95V</li>
+<li>软起动时间800us</li>
+</ul>
+</li>
+</ul>
 <h5 id="Part-3-LDO-降压"><a href="#Part-3-LDO-降压" class="headerlink" title="Part 3 LDO 降压"></a>Part 3 LDO 降压</h5><ul>
 <li><p>RT9012</p>
 <ul>
@@ -2573,10 +2617,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-18T21:42:19+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-09-12T21:51:12+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年10月18日</p>
+    <p>更新于：2024年9月12日</p>
   </a>
 </div>
 
@@ -3141,7 +3185,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tinytka.github.io/","name":"TinyTka's Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://tinytka.github.io/2023/10/18/电子设计常用芯片集锦/","name":"电子设计常用芯片集锦"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"TinyTka's Blog","url":"https://tinytka.github.io/","keywords":null,"description":"","author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","description":""},"publisher":{"@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tinytka.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"电子设计常用芯片集锦","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://tinytka.github.io/2023/10/18/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E5%B8%B8%E7%94%A8%E8%8A%AF%E7%89%87%E9%9B%86%E9%94%A6/"},"author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/"},"publisher":{"@type":"Organization","name":"TinyTka's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://tinytka.github.io/2023/10/18/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E5%B8%B8%E7%94%A8%E8%8A%AF%E7%89%87%E9%9B%86%E9%94%A6/","wordCount":0,"datePublished":"2023-10-18T13:10:02.000Z","dateModified":"2023-10-18T13:42:19.144Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tinytka.github.io/","name":"TinyTka's Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://tinytka.github.io/2023/10/18/电子设计常用芯片集锦/","name":"电子设计常用芯片集锦"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"TinyTka's Blog","url":"https://tinytka.github.io/","keywords":null,"description":"","author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","description":""},"publisher":{"@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tinytka.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"电子设计常用芯片集锦","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://tinytka.github.io/2023/10/18/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E5%B8%B8%E7%94%A8%E8%8A%AF%E7%89%87%E9%9B%86%E9%94%A6/"},"author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/"},"publisher":{"@type":"Organization","name":"TinyTka's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://tinytka.github.io/2023/10/18/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E5%B8%B8%E7%94%A8%E8%8A%AF%E7%89%87%E9%9B%86%E9%94%A6/","wordCount":0,"datePublished":"2023-10-18T13:10:02.000Z","dateModified":"2024-09-12T13:51:12.876Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
