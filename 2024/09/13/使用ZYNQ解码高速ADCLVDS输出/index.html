@@ -45,7 +45,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-09-13T12:41:41.000Z">
-<meta property="article:modified_time" content="2024-09-26T12:59:09.980Z">
+<meta property="article:modified_time" content="2024-09-26T13:15:59.075Z">
 <meta property="article:author" content="ptyybb">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2111,7 +2111,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1727356252449),
+    lastupdate: new Date(1727356605938),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2512,7 +2512,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <h1 id="使用ZYNQ解码高速ADCLVDS输出"><a href="#使用ZYNQ解码高速ADCLVDS输出" class="headerlink" title="使用ZYNQ解码高速ADCLVDS输出"></a>使用ZYNQ解码高速ADCLVDS输出</h1><h2 id="1-LVDS简介"><a href="#1-LVDS简介" class="headerlink" title="1. LVDS简介"></a>1. LVDS简介</h2><p>LVDS（Low Voltage Differential Signaling）是一种差分信号传输技术，广泛应用于高速数据传输中。如图所示，</p>
-<p><img src="/lvds.svg" class="lazyload" data-srcset="/lvds.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="lvds"></p>
+<p><img src="lvds.svg" class="lazyload" data-srcset="lvds.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="lvds"></p>
 <p>LVDS信号通过两个差分对进行传输，每个差分对由一个正信号和一个负信号组成。这种信号传输方式具有低功耗、低噪声和高速传输的特点，因此在高速数据传输中得到了广泛应用。</p>
 <h2 id="2-AFE5832简介"><a href="#2-AFE5832简介" class="headerlink" title="2.AFE5832简介"></a>2.AFE5832简介</h2><p>AFE5832是一款高性能的模拟前端（AFE）芯片，用于高速ADC（模数转换器）的输出。它支持LVDS接口，可以将模拟信号转换为数字信号，并输出到外部设备。AFE5832具有以下特点：</p>
 <ul>
@@ -2522,7 +2522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>支持LVDS接口：支持LVDS接口，可以将模拟信号转换为数字信号，并输出到外部设备。</li>
 </ul>
 <h3 id="AFE5832的LVDS输出"><a href="#AFE5832的LVDS输出" class="headerlink" title="AFE5832的LVDS输出"></a>AFE5832的LVDS输出</h3><p>AFE5832的LVDS输出接口由十八个差分对组成，分别为1对bit时钟，1对帧时钟，16对数据，每个差分对由一个正信号和一个负信号组成。这些差分对可以同时传输多个通道的数据，从而实现高速数据传输。如图所示，为10bit分辨率下LVDS输出的示意图。</p>
-<p><img src="/AFE5832ADCout.svg" class="lazyload" data-srcset="/AFE5832ADCout.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="lvds"></p>
+<p><img src="AFE5832ADCout.svg" class="lazyload" data-srcset="AFE5832ADCout.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="lvds"></p>
 <p>可以看出，数据输出是DDR的，即数据在时钟的上升沿和下降沿都发生变化，数据时钟变化边沿在数据稳定的范围内，但是帧时钟与数据输出对齐的。这样可以降低数据时钟的频率，但是这样也增加了解码的难度。</p>
 <h2 id="3-ZYNQ解码AFE5832的LVDS输出"><a href="#3-ZYNQ解码AFE5832的LVDS输出" class="headerlink" title="3. ZYNQ解码AFE5832的LVDS输出"></a>3. ZYNQ解码AFE5832的LVDS输出</h2><h3 id="3-1-ZYNQ的LVDS接口"><a href="#3-1-ZYNQ的LVDS接口" class="headerlink" title="3.1 ZYNQ的LVDS接口"></a>3.1 ZYNQ的LVDS接口</h3><p>参考ZYNQ的<a href="www.xilinx.com/support/documentation/user_guides/ug471_7Series_SelectIO.pdf">ug471</a>第91页–96页，ZYNQ内部有HP(high performance) bank和HR(high range) bank，HR bank仅支持LVDS_25标准，HP bank仅支持LVDS标准。</p>
 <p>博主这里使用的XC7Z020芯片，这片芯片仅有HR bank，因此这里使用HR bank 的LVDS_25接口，这里按照手册所说，使用IO的所在bank的VCCO电平需要为2.5V，但是博主前期设计的时候并没有注意到这里，AFE5832和7020均使用1.8V标准，但是实测在引脚约束里将引脚类型设置为LVDS_25后，数据可以正常传输，因此这里暂时没有发现什么问题。</p>
@@ -2547,7 +2547,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>ISERDESE2是Xilinx提供的一个用于串并转换的原语，支持高速数据传输，而不需要特殊FPGA布线来满足数据频率要求，总结来收就是ZYNQ的PL资源中一个特殊的模块，是专门用于高速数据解串的。在代码中例化它之后你可以在综合布线完成之后的芯片资源使用情况中看到它。</p>
 <p>它可以将串行数据转换为并行数据，支持SDR和DDR输入，ISERDESE2可以配置为2、3、4、5、6、7、8、10，14的数据宽度。其中10和14位数据宽度需要使用两个ISERDESE2原语并联实现。</p>
 <p>同时，允许用户动态调整移位，即如果解码结果出现错位，可以动态调整移位，从而实现数据对齐。<br>这个功能由bitslip子模块实现。</p>
-<p>ISERDESE2模块的输入输出如下图所示：<br><img src="/ISERDESE2.png" class="lazyload" data-srcset="/ISERDESE2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ISERDESE2"></p>
+<p>ISERDESE2模块的输入输出如下图所示：<br><img src="ISERDESE2.png" class="lazyload" data-srcset="ISERDESE2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="ISERDESE2"></p>
 <p>篇幅有限，具体引脚功能请参考ug471手册。</p>
 <h3 id="3-4-代码实现"><a href="#3-4-代码实现" class="headerlink" title="3.4 代码实现"></a>3.4 代码实现</h3><p>待更新</p>
 <p> <a href="#top">回到顶部</a></p>
@@ -2575,7 +2575,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-09-26T20:59:09+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-09-26T21:15:59+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2024年9月26日</p>
@@ -3169,7 +3169,7 @@ QFN封装
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tinytka.github.io/","name":"TinyTka's Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://tinytka.github.io/2024/09/13/使用ZYNQ解码高速ADCLVDS输出/","name":"使用ZYNQ解码高速ADCLVDS输出"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"TinyTka's Blog","url":"https://tinytka.github.io/","keywords":null,"description":"","author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","description":""},"publisher":{"@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tinytka.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"使用ZYNQ解码高速ADCLVDS输出","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://tinytka.github.io/2024/09/13/%E4%BD%BF%E7%94%A8ZYNQ%E8%A7%A3%E7%A0%81%E9%AB%98%E9%80%9FADCLVDS%E8%BE%93%E5%87%BA/"},"author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/"},"publisher":{"@type":"Organization","name":"TinyTka's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://tinytka.github.io/2024/09/13/%E4%BD%BF%E7%94%A8ZYNQ%E8%A7%A3%E7%A0%81%E9%AB%98%E9%80%9FADCLVDS%E8%BE%93%E5%87%BA/","wordCount":0,"datePublished":"2024-09-13T12:41:41.000Z","dateModified":"2024-09-26T12:59:09.980Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tinytka.github.io/","name":"TinyTka's Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://tinytka.github.io/2024/09/13/使用ZYNQ解码高速ADCLVDS输出/","name":"使用ZYNQ解码高速ADCLVDS输出"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"TinyTka's Blog","url":"https://tinytka.github.io/","keywords":null,"description":"","author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","description":""},"publisher":{"@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tinytka.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"使用ZYNQ解码高速ADCLVDS输出","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://tinytka.github.io/2024/09/13/%E4%BD%BF%E7%94%A8ZYNQ%E8%A7%A3%E7%A0%81%E9%AB%98%E9%80%9FADCLVDS%E8%BE%93%E5%87%BA/"},"author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/"},"publisher":{"@type":"Organization","name":"TinyTka's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://tinytka.github.io/2024/09/13/%E4%BD%BF%E7%94%A8ZYNQ%E8%A7%A3%E7%A0%81%E9%AB%98%E9%80%9FADCLVDS%E8%BE%93%E5%87%BA/","wordCount":0,"datePublished":"2024-09-13T12:41:41.000Z","dateModified":"2024-09-26T13:15:59.075Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
