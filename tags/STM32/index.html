@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://tinytka.github.io/tags/zynq/"/>
+  <link rel="canonical" href="https://tinytka.github.io/tags/stm32/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,12 +33,12 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>标签：zynq - TinyTka's Blog</title>
+  <title>标签：STM32 - TinyTka's Blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="TinyTka's Blog - ptyybb - TinyTka's Blog">
   <meta property="og:type" content="website">
 <meta property="og:title" content="TinyTka&#39;s Blog">
-<meta property="og:url" content="https://tinytka.github.io/tags/zynq/index.html">
+<meta property="og:url" content="https://tinytka.github.io/tags/STM32/index.html">
 <meta property="og:site_name" content="TinyTka&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2420,7 +2420,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://tinytka.github.io/2024/09/13/使用ZYNQ解码高速ADCLVDS输出/">
+  <link itemprop="mainEntityOfPage" href="https://tinytka.github.io/2024/09/27/STM32H7指定从外部Flash启动程序/">
   <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
     <meta itemprop="name" content="TinyTka's Blog">
   </span>
@@ -2438,18 +2438,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/09/13/%E4%BD%BF%E7%94%A8ZYNQ%E8%A7%A3%E7%A0%81%E9%AB%98%E9%80%9FADCLVDS%E8%BE%93%E5%87%BA/"  itemprop="url">
-        使用ZYNQ解码高速ADCLVDS输出
+      <a href="/2024/09/27/STM32H7%E6%8C%87%E5%AE%9A%E4%BB%8E%E5%A4%96%E9%83%A8Flash%E5%90%AF%E5%8A%A8%E7%A8%8B%E5%BA%8F/"  itemprop="url">
+        STM32H7指定从外部Flash启动程序
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        使用ZYNQ解码高速ADCLVDS输出1. LVDS简介LVDS（Low Voltage Differential Signaling）是一种差分信号传输技术，广泛应用于高速数据传输中。如图所示，
-
-LVDS信号通过两个差分对进行传输，每个差分对由一个正信号和一个负信号组成。这种信号传输方式具有低功耗、低噪声和高速传输的特点，因此在高速数据传输中得到了广泛应用。
-2.AFE5832简介AFE...
+        STM32H7指定从外部Flash启动程序代码启动流程单片机默认上电之后会从0x80000000处开始执行代码，也就是从内部flash启动。首先我们来看启动流程。
+在开始之前，首先得确保你可以找得到.s文件，比如startup_stm32h7b0xx.s，这个文件是启动文件，在STM32CubeMX生成的代码中，这个文件位于MDK_ARM目录下。
+然后，找到如下代码：
+12345678910...
       
     
   </div>
@@ -2457,12 +2457,20 @@ LVDS信号通过两个差分对进行传输，每个差分对由一个正信号�
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-09-13T20:41:41+08:00">2024-09-13</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-09-27T21:04:27+08:00">2024-09-27</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32/">STM32</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+              <a href="/categories/STM32/" itemprop="url"><span itemprop="name">STM32</span></a>
+            </span>
+          
         
       </div>
       
         <div>
-          <a class='readmore' href='/2024/09/13/%E4%BD%BF%E7%94%A8ZYNQ%E8%A7%A3%E7%A0%81%E9%AB%98%E9%80%9FADCLVDS%E8%BE%93%E5%87%BA/' itemprop="url">
+          <a class='readmore' href='/2024/09/27/STM32H7%E6%8C%87%E5%AE%9A%E4%BB%8E%E5%A4%96%E9%83%A8Flash%E5%90%AF%E5%8A%A8%E7%A8%8B%E5%BA%8F/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3055,7 +3063,7 @@ LVDS信号通过两个差分对进行传输，每个差分对由一个正信号�
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tinytka.github.io/","name":"TinyTka's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://tinytka.github.io/tags/zynq/","name":"zynq"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"TinyTka's Blog","url":"https://tinytka.github.io/","keywords":null,"description":"","author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","description":""},"publisher":{"@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tinytka.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/"},"publisher":{"@type":"Organization","name":"TinyTka's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tinytka.github.io/","name":"TinyTka's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://tinytka.github.io/tags/STM32/","name":"STM32"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"TinyTka's Blog","url":"https://tinytka.github.io/","keywords":null,"description":"","author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","description":""},"publisher":{"@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tinytka.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/"},"publisher":{"@type":"Organization","name":"TinyTka's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

@@ -2107,7 +2107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1727357921053),
+    lastupdate: new Date(1727444835305),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2477,9 +2477,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
+  <link itemprop="mainEntityOfPage" href="https://tinytka.github.io/2024/09/27/STM32H7指定从外部Flash启动程序/">
+  <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
+    <meta itemprop="name" content="TinyTka's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="https://schema.org.cn/Post">
+    <meta itemprop="name" content="TinyTka's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/09/27/STM32H7%E6%8C%87%E5%AE%9A%E4%BB%8E%E5%A4%96%E9%83%A8Flash%E5%90%AF%E5%8A%A8%E7%A8%8B%E5%BA%8F/"  itemprop="url">
+        STM32H7指定从外部Flash启动程序
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        STM32H7指定从外部Flash启动程序代码启动流程单片机默认上电之后会从0x80000000处开始执行代码，也就是从内部flash启动。首先我们来看启动流程。
+在开始之前，首先得确保你可以找得到.s文件，比如startup_stm32h7b0xx.s，这个文件是启动文件，在STM32CubeMX生成的代码中，这个文件位于MDK_ARM目录下。
+然后，找到如下代码：
+12345678910...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-09-27T21:04:27+08:00">2024-09-27</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/STM32/">STM32</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+              <a href="/categories/STM32/" itemprop="url"><span itemprop="name">STM32</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/09/27/STM32H7%E6%8C%87%E5%AE%9A%E4%BB%8E%E5%A4%96%E9%83%A8Flash%E5%90%AF%E5%8A%A8%E7%A8%8B%E5%BA%8F/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -2676,6 +2744,28 @@ LVDS信号通过两个差分对进行传输，每个差分对由一个正信号�
     
     
       
+  
+  <section class="widget category desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/STM32/" href="/categories/STM32/"
+            active-action="action-categoriesSTM32"
+            ><div class='name'>STM32</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
 
     
   
@@ -2695,7 +2785,7 @@ LVDS信号通过两个差分对进行传输，每个差分对由一个正信号�
 
 
     <div class='content'>
-      <a href="/tags/adc/" style="font-size: 14px; color: #999">adc</a> <a href="/tags/zynq/" style="font-size: 14px; color: #999">zynq</a>
+      <a href="/tags/STM32/" style="font-size: 14px; color: #999">STM32</a> <a href="/tags/STM32H7/" style="font-size: 14px; color: #999">STM32H7</a> <a href="/tags/adc/" style="font-size: 14px; color: #999">adc</a> <a href="/tags/zynq/" style="font-size: 14px; color: #999">zynq</a> <a href="/tags/%E5%A4%96%E9%83%A8Flash/" style="font-size: 14px; color: #999">外部Flash</a>
     </div>
   </section>
 
