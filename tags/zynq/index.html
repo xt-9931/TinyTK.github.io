@@ -33,12 +33,12 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>标签：zynq - TinyTka's Blog</title>
+  <title>标签：ZYNQ - TinyTka's Blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="TinyTka's Blog - ptyybb - TinyTka's Blog">
   <meta property="og:type" content="website">
 <meta property="og:title" content="TinyTka&#39;s Blog">
-<meta property="og:url" content="https://tinytka.github.io/tags/zynq/index.html">
+<meta property="og:url" content="https://tinytka.github.io/tags/ZYNQ/index.html">
 <meta property="og:site_name" content="TinyTka&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2107,7 +2107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1733570095137),
+    lastupdate: new Date(1733714366719),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2420,7 +2420,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="https://schema.org.cn/Article" >
-  <link itemprop="mainEntityOfPage" href="https://tinytka.github.io/2024/09/13/使用ZYNQ解码高速ADCLVDS输出/">
+  <link itemprop="mainEntityOfPage" href="https://tinytka.github.io/2024/12/07/ZYNQ-AMP-Linux-裸机/">
   <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
     <meta itemprop="name" content="TinyTka's Blog">
   </span>
@@ -2438,18 +2438,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/09/13/%E4%BD%BF%E7%94%A8ZYNQ%E8%A7%A3%E7%A0%81%E9%AB%98%E9%80%9FADCLVDS%E8%BE%93%E5%87%BA/"  itemprop="url">
-        使用ZYNQ解码高速ADCLVDS输出
+      <a href="/2024/12/07/ZYNQ-AMP-Linux-%E8%A3%B8%E6%9C%BA/"  itemprop="url">
+        ZYNQ AMP Linux + 裸机
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        使用ZYNQ解码高速ADCLVDS输出1. LVDS简介LVDS（Low Voltage Differential Signaling）是一种差分信号传输技术，广泛应用于高速数据传输中。如图所示，
+        ZYNQ AMP Linux + 裸机1. 硬件准备
+Xilinx ZYNQ7020 SoC开发板 : 笔者这里使用的是微相的ZYNQ7020开发板,当然只要是ZYNQ7020的开发板都可以
+串口线: 用于连接开发板和电脑，登录Linux系统和监视cpu1的输出
+JTAG线:用于调试裸机程序
 
-LVDS信号通过两个差分对进行传输，每个差分对由一个正信号和一个负信号组成。这种信号传输方式具有低功耗、低噪声和高速传输的特点，因此在高速数据传输中得到了广泛应用。
-2.AFE5832简介AFE...
+2. 软件准备
+Vivado 2020.2
+Vitis 2020.2
+petalinux 2020...
       
     
   </div>
@@ -2457,7 +2462,7 @@ LVDS信号通过两个差分对进行传输，每个差分对由一个正信号�
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-09-13T20:41:41+08:00">2024-09-13</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-12-07T19:13:00+08:00">2024-12-07</time>
         
           <span class="dot"></span>
           <a class="category-link" href="/categories/ZYNQ/">ZYNQ</a>
@@ -2470,7 +2475,7 @@ LVDS信号通过两个差分对进行传输，每个差分对由一个正信号�
       </div>
       
         <div>
-          <a class='readmore' href='/2024/09/13/%E4%BD%BF%E7%94%A8ZYNQ%E8%A7%A3%E7%A0%81%E9%AB%98%E9%80%9FADCLVDS%E8%BE%93%E5%87%BA/' itemprop="url">
+          <a class='readmore' href='/2024/12/07/ZYNQ-AMP-Linux-%E8%A3%B8%E6%9C%BA/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3073,7 +3078,20 @@ LVDS信号通过两个差分对进行传输，每个差分对由一个正信号�
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tinytka.github.io/","name":"TinyTka's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://tinytka.github.io/tags/zynq/","name":"zynq"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"TinyTka's Blog","url":"https://tinytka.github.io/","keywords":null,"description":"","author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","description":""},"publisher":{"@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tinytka.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/"},"publisher":{"@type":"Organization","name":"TinyTka's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tinytka.github.io/","name":"TinyTka's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://tinytka.github.io/tags/ZYNQ/","name":"ZYNQ"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"TinyTka's Blog","url":"https://tinytka.github.io/","keywords":null,"description":"","author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/","description":""},"publisher":{"@type":"Organization","name":"TinyTka's Blog","url":"https://tinytka.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tinytka.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"ptyybb","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://tinytka.github.io/"},"publisher":{"@type":"Organization","name":"TinyTka's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+
+
+
+
+    </div>
+    <!-- import body_end begin-->
+    <!-- import body_end end-->
+    <!-- Custom Files bodyEnd begin-->
+    
+    <!-- Custom Files bodyEnd end-->
+  </body>
+</html>
+192.png","width":192,"height":192}}]</script>
 
 
 
